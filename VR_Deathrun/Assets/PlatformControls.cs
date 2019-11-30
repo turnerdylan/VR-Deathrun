@@ -8,12 +8,15 @@ public class PlatformControls : MonoBehaviour
     public float speed = 10.0f;
     private float translation;
     private float straffe;
+    Rigidbody rb;
+    public float jump = 10;
 
     // Use this for initialization
     void Start()
     {
         // turn off the cursor
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,6 +32,12 @@ public class PlatformControls : MonoBehaviour
         {
             // turn on the cursor
             Cursor.lockState = CursorLockMode.None;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("added force");
+            rb.AddForce(0, jump, 0);
         }
     }
 }

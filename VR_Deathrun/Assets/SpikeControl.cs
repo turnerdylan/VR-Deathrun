@@ -11,34 +11,33 @@ public class SpikeControl : MonoBehaviour
     private float journeyLength;
     float fractionOfJourney;
     bool activated = false;
+    Animator anim;
 
     void Start()
     {
         startMarker = this.transform;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
         
         float distCovered = (Time.time - startTime) * speed;
         fractionOfJourney = distCovered / journeyLength;
-        if (Input.GetKeyDown(KeyCode.Space) && !activated)
+        if (Input.GetKeyDown(KeyCode.L) && !activated)
         {
-            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
-        }
-        else
-        {
-            //transform.position = Vector3.Lerp(endMarker.position, startMarker.position, fractionOfJourney / 5);
+            anim.SetTrigger("Activate");
+            activated = true;
         }
     }
 
-    private IEnumerator ShootSpike()
+    private void OnTriggerEnter(Collider other)
     {
-        
-        activated = true;
-        yield return new WaitForSeconds(5);
-        Debug.Log("delayed");
-        
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log("stabbed lol");
+        }
     }
+
 }
