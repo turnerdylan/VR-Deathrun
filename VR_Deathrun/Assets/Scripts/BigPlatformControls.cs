@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformControls : MonoBehaviour
+public class BigPlatformControls : MonoBehaviour
 {
 
     public float speed = 10.0f;
     private float translation;
     private float straffe;
+    private float elevation;
     Rigidbody rb;
-    public float jump = 10;
-    Collider[] isGrounded;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask whatIsGround;
 
     // Use this for initialization
     void Start()
@@ -23,16 +19,6 @@ public class PlatformControls : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
-    {
-        isGrounded = Physics.OverlapSphere(groundCheck.position, checkRadius, whatIsGround);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded[0].gameObject.layer == 9)
-        {
-            Debug.Log("added force");
-            rb.AddForce(0, jump, 0);
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -40,12 +26,15 @@ public class PlatformControls : MonoBehaviour
         // You can furthor set it on Unity. (Edit, Project Settings, Input)
         translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.Translate(straffe, 0, translation);
+        elevation = Input.GetAxis("UpDown") * speed * Time.deltaTime;
+        transform.Translate(straffe, elevation, translation);
 
         if (Input.GetKeyDown("escape"))
         {
             // turn on the cursor
             Cursor.lockState = CursorLockMode.None;
         }
+
+        
     }
 }
