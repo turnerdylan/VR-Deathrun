@@ -5,29 +5,26 @@ using UnityEngine;
 public class ActivatorSpawner : MonoBehaviour
 {
     public GameObject spawnedObject;
+    public GameObject player;
+    public float threshold;
     private Vector3 pos;
     public float xPos;
     public float yPos;
     public float zPos;
-    public bool activated;
-    public float cooldown;
-    private float timer;
+    private bool activated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        activated = false;
         pos = new Vector3(xPos, yPos, zPos);
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(activated){
+        if(Vector3.Distance(transform.position, player.transform.position) <= threshold && activated == false){
+            activated = true;
             Instantiate(spawnedObject, pos, Quaternion.identity);
-            activated = false;
         }
     }
 }
