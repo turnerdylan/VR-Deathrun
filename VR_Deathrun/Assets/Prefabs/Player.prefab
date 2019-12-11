@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772760847633087185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 772760847720952598}
@@ -156,12 +156,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jump: 300
+  jump: 100
   groundCheck: {fileID: 772760847633087184}
   checkRadius: 0.6
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 567
 --- !u!1 &772760848498530012
 GameObject:
   m_ObjectHideFlags: 0

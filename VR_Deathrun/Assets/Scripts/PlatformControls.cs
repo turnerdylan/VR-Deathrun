@@ -26,10 +26,12 @@ public class PlatformControls : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics.OverlapSphere(groundCheck.position, checkRadius, whatIsGround);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded[0].gameObject.layer == 9)
+        for(int i=0; i<isGrounded.Length; i++)
         {
-            Debug.Log("added force");
-            rb.AddForce(0, jump, 0);
+            if (Input.GetKey(KeyCode.Space) && isGrounded[i].gameObject.layer == 9)
+            {
+                rb.AddForce(0, jump, 0);
+            }
         }
     }
 

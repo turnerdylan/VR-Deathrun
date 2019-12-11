@@ -4,28 +4,19 @@ using System;
 
 public class SpikeControl : MonoBehaviour
 {
-    Transform startMarker;
-    public Transform endMarker;
-    public float speed = 5f;
-    private float startTime;
-    private float journeyLength;
-    float fractionOfJourney;
     bool activated = false;
     Animator anim;
+    public GameObject player;
+    public float threshold;
+
 
     void Start()
     {
-        startMarker = this.transform;
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        
-        float distCovered = (Time.time - startTime) * speed;
-        fractionOfJourney = distCovered / journeyLength;
-        if (Input.GetKeyDown(KeyCode.L) && !activated)
+        if(Vector3.Distance(player.transform.position, this.transform.parent.position) <= threshold && !activated)
         {
             anim.SetTrigger("Activate");
             activated = true;
@@ -39,5 +30,7 @@ public class SpikeControl : MonoBehaviour
             Debug.Log("stabbed lol");
         }
     }
+
+    
 
 }
