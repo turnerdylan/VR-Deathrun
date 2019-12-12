@@ -54,6 +54,14 @@ public class PlatformControls : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Lethal")
+        {
+            KillPlayer();
+        }
+    }
+
 
     public void KillPlayer()
     {
