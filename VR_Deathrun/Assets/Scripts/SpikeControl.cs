@@ -6,12 +6,13 @@ public class SpikeControl : MonoBehaviour
 {
     bool activated = false;
     Animator anim;
-    public GameObject player;
+    PlatformControls player;
     public float threshold;
 
 
     void Start()
     {
+        player = FindObjectOfType<PlatformControls>();
         anim = GetComponent<Animator>();
     }
     void Update()
@@ -22,15 +23,4 @@ public class SpikeControl : MonoBehaviour
             activated = true;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Player")
-        {
-            Debug.Log("stabbed lol");
-        }
-    }
-
-    
-
 }

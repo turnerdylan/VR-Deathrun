@@ -15,6 +15,8 @@ public class PlatformControls : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    public Vector3 currentSpawnPoint;
+
     // Use this for initialization
     void Start()
     {
@@ -43,11 +45,19 @@ public class PlatformControls : MonoBehaviour
         translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         transform.Translate(straffe, 0, translation);
+        //rb.velocity = new Vector3(straffe, 0, translation);
 
         if (Input.GetKeyDown("escape"))
         {
             // turn on the cursor
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+
+    public void KillPlayer()
+    {
+        Debug.Log("you died");
+        transform.position = currentSpawnPoint;
     }
 }
