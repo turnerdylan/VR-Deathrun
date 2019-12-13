@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4849191469568592851}
   - component: {fileID: 4849191469568592850}
   - component: {fileID: -908817590324219862}
-  - component: {fileID: 4515334732244451550}
+  - component: {fileID: 8964415310984986235}
   m_Layer: 0
   m_Name: BigBoulder
   m_TagString: Lethal
@@ -98,7 +98,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5699837f051caec4098d3d56383d05f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   timer: 10
---- !u!114 &4515334732244451550
+--- !u!114 &8964415310984986235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,5 +154,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:

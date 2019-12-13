@@ -90,6 +90,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3967805
   m_Center: {x: -0.0000009536743, y: 0, z: 0.00000017881393}
+--- !u!114 &7191410435481921601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905059737824848880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &6905059736870445055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119,6 +131,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3967805
   m_Center: {x: -0.0000014305115, y: 0, z: -0.00000011920929}
+--- !u!114 &108407592058259679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905059738239745442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &6905059738490835151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,6 +172,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3806236
   m_Center: {x: 0.014637608, y: 0.027341455, z: -0.002604962}
+--- !u!114 &2792475358783485144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905059738631056289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &6905059737850571542
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,6 +213,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.35268372
   m_Center: {x: -0.02386718, y: -0.0027752668, z: 0.033577047}
+--- !u!114 &90442357586967332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905059738696355194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6905059737824856774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 123190, guid: 0654a5036c107e14196ccfa312c4537a, type: 3}
       propertyPath: m_Name
       value: 2K_RedStone_Boulder3
+      objectReference: {fileID: 0}
+    - target: {fileID: 123190, guid: 0654a5036c107e14196ccfa312c4537a, type: 3}
+      propertyPath: m_TagString
+      value: Lethal
       objectReference: {fileID: 0}
     - target: {fileID: 457570, guid: 0654a5036c107e14196ccfa312c4537a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -269,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2K_RedStone_Boulder4
       objectReference: {fileID: 0}
+    - target: {fileID: 130346, guid: dccde8c6a3cd4eb42a85f9777da665db, type: 3}
+      propertyPath: m_TagString
+      value: Lethal
+      objectReference: {fileID: 0}
     - target: {fileID: 465056, guid: dccde8c6a3cd4eb42a85f9777da665db, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7
@@ -350,6 +406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2K_RedStone_Boulder2
       objectReference: {fileID: 0}
+    - target: {fileID: 147526, guid: 2b1a2c1ec9be76f48be01ca07e3ce529, type: 3}
+      propertyPath: m_TagString
+      value: Lethal
+      objectReference: {fileID: 0}
     - target: {fileID: 467846, guid: 2b1a2c1ec9be76f48be01ca07e3ce529, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.65
@@ -430,6 +490,10 @@ PrefabInstance:
     - target: {fileID: 116924, guid: 25728dbea52852f43a01e13ac0132bb5, type: 3}
       propertyPath: m_Name
       value: 2K_RedStone_Boulder1
+      objectReference: {fileID: 0}
+    - target: {fileID: 116924, guid: 25728dbea52852f43a01e13ac0132bb5, type: 3}
+      propertyPath: m_TagString
+      value: Lethal
       objectReference: {fileID: 0}
     - target: {fileID: 495448, guid: 25728dbea52852f43a01e13ac0132bb5, type: 3}
       propertyPath: m_LocalPosition.x
