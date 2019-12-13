@@ -17,6 +17,8 @@ public class PlatformControls : MonoBehaviour
 
     public Vector3 currentSpawnPoint;
 
+    public Transform camera;
+
     // Use this for initialization
     void Start()
     {
@@ -31,7 +33,7 @@ public class PlatformControls : MonoBehaviour
         isGrounded = Physics.OverlapSphere(groundCheck.position, checkRadius, whatIsGround);
         for(int i=0; i<isGrounded.Length; i++)
         {
-            if (Input.GetKey(KeyCode.Space) && isGrounded[i].gameObject.layer == 9)
+            if (Input.GetButtonDown("Fire1") && isGrounded[i].gameObject.layer == 9)
             {
                 rb.AddForce(0, jump, 0);
             }
@@ -41,12 +43,16 @@ public class PlatformControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float yRot = camera.transform.eulerAngles.y;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRot, transform.eulerAngles.z); 
+
         // Input.GetAxis() is used to get the user's input
         // You can furthor set it on Unity. (Edit, Project Settings, Input)
         translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         transform.Translate(straffe, 0, translation);
         //rb.velocity = new Vector3(straffe, 0, translation);
+
 
         if (Input.GetKeyDown("escape"))
         {

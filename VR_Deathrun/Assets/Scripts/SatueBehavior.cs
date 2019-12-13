@@ -20,7 +20,7 @@ public class SatueBehavior : MonoBehaviour
     {
         destroyTimer -= Time.deltaTime;
         if(Vector3.Distance(transform.position, player.transform.position) <= threshold){
-            rb.AddForce(0, 0, 50);
+            rb.AddForce(0, 0, 100);
             //Debug.Log("Slam");
         }
         if(destroyTimer <= 5){
