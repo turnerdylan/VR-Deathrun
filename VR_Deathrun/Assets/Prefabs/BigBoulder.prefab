@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4849191469568592851}
   - component: {fileID: 4849191469568592850}
   - component: {fileID: -908817590324219862}
+  - component: {fileID: 4515334732244451550}
   m_Layer: 0
   m_Name: BigBoulder
   m_TagString: Lethal
@@ -143,3 +144,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
+--- !u!114 &4515334732244451550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849191470790102831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce03770cec87e04da1f8cb3370a491d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

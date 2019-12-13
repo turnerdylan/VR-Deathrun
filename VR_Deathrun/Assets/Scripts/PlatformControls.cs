@@ -20,6 +20,7 @@ public class PlatformControls : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        currentSpawnPoint = transform.position;
         // turn off the cursor
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
