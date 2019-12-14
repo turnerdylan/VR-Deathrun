@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformControls : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class PlatformControls : MonoBehaviour
         {
             // turn on the cursor
             Cursor.lockState = CursorLockMode.None;
+        }
+
+        if(Input.GetButtonDown("Jump")){
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
