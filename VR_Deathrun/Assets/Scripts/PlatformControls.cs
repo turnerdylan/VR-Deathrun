@@ -67,7 +67,13 @@ public class PlatformControls : MonoBehaviour
         {
             KillPlayer();
         }
+        if (other.gameObject.tag == "Victory")
+        {
+            transform.position = new Vector3(60, 3, 60);
+        }
     }
+
+    
 
 
     public void KillPlayer()
